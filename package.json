@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "build": "lerna run build --parallel",
+    "build-gatsby": "cd web && npm run build",
     "dev": "lerna run dev --parallel",
     "format": "lerna run format",
     "build-studio": "cd studio && npm run build",
