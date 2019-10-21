@@ -16,7 +16,6 @@ module.exports = {
     author: `Asa Smith <asa@asasmith.com>`,
   },
   plugins: [
-    'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
@@ -32,10 +31,6 @@ module.exports = {
     },
     // {
     //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `images`,
-    //     path: `${__dirname}/src/images`,
-    //   },
     // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

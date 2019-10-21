@@ -10,7 +10,7 @@ export default function Statistics ({stats}) {
           const {statistic, info, id} = item.node
           return (
             <ListItem key={id}>
-              <p>{ statistic }</p>
+              <Heading>{ statistic }</Heading>
               <p>{ info }</p>
             </ListItem>
           )
@@ -31,4 +31,10 @@ const ListItem = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`
+
+const Heading = styled.p`
+  font-family: var(--headerFont);
+  font-size: 2.5rem;
+  font-weight: 700;
 `

@@ -14,6 +14,7 @@ export default function IndexPage ({data}) {
     headerImg,
     heroImg,
   },
+  about,
   allGirls,
   stats,
   } = data
@@ -22,13 +23,30 @@ export default function IndexPage ({data}) {
     <Layout>
       <SEO title='Home' />
       <UContentContainer>
-        <Img fluid={headerImg.asset.fluid} />
+        <figure style={{
+          maxWidth: `35rem`,
+        }}>
+          <Img fluid={headerImg.asset.fluid} />
+        </figure>
       </UContentContainer>
-      <h1>{heroTitle}</h1>
-      <p>{heroBody}</p>
+      {/* <h1>{heroTitle}</h1> */}
+      {/* <p>{heroBody}</p> */}
       <UContentContainer>
-        <Img fluid={heroImg.asset.fluid} />
+        <Img fluid={heroImg.asset.fluid} style={{
+          maxHeight: `45rem`,
+        }} />
       </UContentContainer>
+      <section>
+        <UContentContainer>
+          <h2 style={{
+            textAlign: `center`,
+          }}>{about.title}</h2>
+          <p style={{
+            maxWidth: `35rem`,
+            margin: `0 auto`,
+          }}>{about.body}</p>
+        </UContentContainer>
+      </section>
       <Statistics stats={stats} />
       <section>
         <ul>
@@ -57,7 +75,7 @@ export default function IndexPage ({data}) {
 
 const ListItem = styled.li`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(3, minmax(450px, 1fr));
 `
 
 const Figure = styled.figure`
@@ -71,6 +89,8 @@ const ContentContainer = styled.div`
 `
 
 const Heading = styled.p`
+  font-family: var(--headerFont);
+  font-size: 1.5rem;
   text-transform: capitalize;
 `
 
@@ -125,6 +145,11 @@ export const query = graphql`
           }
         }
       }
+    }
+
+    about: sanityAbout {
+      title
+      body
     }
 
     stats: allSanityStatistics {
