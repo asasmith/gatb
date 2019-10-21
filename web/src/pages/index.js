@@ -44,12 +44,13 @@ export default function IndexPage ({data}) {
           <p style={{
             maxWidth: `35rem`,
             margin: `0 auto`,
+            padding: `0 5%`,
           }}>{about.body}</p>
         </UContentContainer>
       </section>
       <Statistics stats={stats} />
       <section>
-        <ul>
+        <List>
           {allGirls.edges.map(item => {
             const {id, img, name, about, url} = item.node
             return (
@@ -67,15 +68,19 @@ export default function IndexPage ({data}) {
               </ListItem>
             )
           })}
-        </ul>
+        </List>
       </section>
     </Layout>
   )
 }
 
+const List = styled.ul`
+  padding: 0;
+`
+
 const ListItem = styled.li`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 `
 
 const Figure = styled.figure`
@@ -85,18 +90,31 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 20rem;
+
+  @media screen and (max-width: 600px) {
+    align-items: center;
+    padding: 0 5%;
+  }
+
+  @media screen and (min-width: 800px) {
+    max-width: 20rem;
+  }
 `
 
 const Heading = styled.p`
   font-family: var(--headerFont);
   font-size: 1.5rem;
   text-transform: capitalize;
+
 `
 
 const CTAContainer = styled.div`
   align-items: center;
   display: flex;
+
+  @media screen and (max-width: 850px) {
+    justify-content: center;
+  }
 
   a {
     border: 1px solid #000;

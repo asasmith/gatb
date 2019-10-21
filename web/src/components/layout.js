@@ -37,6 +37,9 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
           &amp;
           {` `}
           <a href='https://www.gatsbyjs.org'>Gatsby</a>
+          {` `}
+          &amp;
+          <span>&#9829;</span>
         </div>
       </div>
     </footer>
