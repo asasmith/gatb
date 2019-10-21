@@ -78,6 +78,9 @@ const ListItem = styled.li`
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 `
 
+const Figure = styled.figure`
+`
+
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
