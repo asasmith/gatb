@@ -22,7 +22,7 @@ export default function Statistics ({stats}) {
 
 const List = styled.ul`
   display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: minmax(20vh, 1fr);
 `
 
