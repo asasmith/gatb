@@ -23,18 +23,23 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-standard": "^4.0.0",
-    "gatsby": "^2.9.2",
-    "gatsby-plugin-postcss": "^2.0.7",
+    "gatsby": "^2.16.2",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-source-sanity": "^4.0.3",
-    "postcss-import": "^12.0.1",
-    "postcss-preset-env": "^6.6.0",
     "prettier-eslint-cli": "^4.7.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1"
   },
   "dependencies": {
-    "gatsby-image": "^2.0.41"
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby-image": "^2.0.41",
+    "gatsby-plugin-manifest": "^2.2.23",
+    "gatsby-plugin-postcss": "^2.1.13",
+    "gatsby-plugin-sharp": "^2.2.32",
+    "gatsby-plugin-styled-components": "^3.1.11",
+    "gatsby-source-filesystem": "^2.1.33",
+    "gatsby-transformer-sharp": "^2.2.23",
+    "styled-components": "^4.4.0"
   }
 }
