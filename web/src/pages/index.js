@@ -75,10 +75,7 @@ export default function IndexPage ({data}) {
 
 const ListItem = styled.li`
   display: grid;
-  grid-template-columns: repeat(3, minmax(450px, 1fr));
-`
-
-const Figure = styled.figure`
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 `
 
 const ContentContainer = styled.div`
