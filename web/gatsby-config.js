@@ -7,7 +7,7 @@ require('dotenv').config()
 // const clientConfig = require('./client-config')
 
 // const isProd = process.env.NODE_ENV === 'production'
-console.log(process.env.SANITY_READ_TOKEN)
+console.log(process.env.SANITY_TOKEN)
 
 module.exports = {
   siteMetadata: {
@@ -30,13 +30,13 @@ module.exports = {
         overlayDrafts: true,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images`,
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
