@@ -1,11 +1,13 @@
 // Load variables from `.env` as soon as possible
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV || 'development'}`,
-})
+// require('dotenv').config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
+require('dotenv').config()
 
 // const clientConfig = require('./client-config')
 
 // const isProd = process.env.NODE_ENV === 'production'
+console.log(process.env.SANITY_READ_TOKEN)
 
 module.exports = {
   siteMetadata: {
@@ -23,8 +25,8 @@ module.exports = {
         // ...clientConfig.sanity,
         projectId: '0f8uv874',
         dataset: 'production',
-        token: process.env.SANITY_READ_TOKEN,
-        watchMode: true,
+        token: process.env.SANITY_TOKEN,
+        watchMode: false,
         overlayDrafts: true,
       },
     },
