@@ -209,6 +209,11 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
 /* img {
   max-width: 100%;
   margin-left: 0;
